@@ -87,23 +87,32 @@ a:hover {
 <li><a href="https://www.atlasobscura.com/random" target="_blank">ATLAS OBSCURA</a></li>
 <li><a href="https://pdimagearchive.org/shuffle-view/" target="_blank">PUBLIC DOMAIN SHUFFLE</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">WIKIPEDIA</a></li>
-<li><a href="https://pdimagearchive.org/infinite-view/" targer="_blank">PUBLIC DOMAIN INFINITE</a></li>
+<li><a href="https://pdimagearchive.org/infinite-view/" target="_blank">PUBLIC DOMAIN INFINITE</a></li>
 </ul>
 
-<h2>NETWORK FRAGMENTS</h2>
+<h2>VISUAL ARCHIVES</h2>
 <ul>
-<li><a href="https://neocities.org/browse?sort_by=random" target="_blank">NEOCITIES</a></li>
-<li><a href="https://theuselessweb.com" target="_blank">USELESS WEB</a></li>
-<li><a href="https://www.reddit.com/r/ObscureMedia" target="_blank">OBSCURE MEDIA</a></li>
-<li><a href="https://www.reddit.com/r/Weird" target="_blank">WEIRD SIGNALS</a></li>
-<li><a href="https://radio.garden" target="_blank">RADIO SIGNALS</a></li>
-<li><a href="https://www.are.na" target="_blank">ARE.NA</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/Special:Random/File" target="_blank">WIKIMEDIA RANDOM FILE</a></li>
+<li><a href="https://www.loc.gov/pictures/random/" target="_blank">LIBRARY OF CONGRESS</a></li>
+<li><a href="https://publicdomainreview.org/random/" target="_blank">PUBLIC DOMAIN REVIEW</a></li>
+</ul>
+
+<h2>STRANGE TEXTS</h2>
+<ul>
+<li><a href="https://www.atlasobscura.com/articles" target="_blank">ATLAS ARTICLES</a></li>
+<li><a href="https://strangeco.blogspot.com/" target="_blank">STRANGE COMPANY</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wikipedia:Unusual_articles" target="_blank">UNUSUAL WIKIPEDIA</a></li>
 </ul>
 
 <h2>FICTION PROTOCOLS</h2>
 <ul>
 <li><a onclick="randomClarkesworld()">CLARKESWORLD</a></li>
 <li><a onclick="randomGutenberg()">PROJECT GUTENBERG</a></li>
+</ul>
+
+<h2>UNKNOWN SIGNAL</h2>
+<ul>
+<li><a onclick="surprise()">SURPRISE ME</a></li>
 </ul>
 
 <div class="footer">
@@ -120,6 +129,19 @@ function randomClarkesworld() {
 function randomGutenberg() {
     var id = Math.floor(Math.random() * 70000) + 1;
     window.open("https://www.gutenberg.org/ebooks/" + id, "_blank");
+}
+
+function surprise() {
+    var links = [
+        "https://www.atlasobscura.com/random",
+        "https://pdimagearchive.org/shuffle-view/",
+        "https://en.wikipedia.org/wiki/Special:Random",
+        "https://commons.wikimedia.org/wiki/Special:Random/File",
+        "https://www.loc.gov/pictures/random/",
+        "https://publicdomainreview.org/random/"
+    ];
+    var choice = links[Math.floor(Math.random() * links.length)];
+    window.open(choice, "_blank");
 }
 </script>
 
